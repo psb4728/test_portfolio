@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/reset.css">
+  <link rel="stylesheet" href="/style.css">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <h1 class="logo">
+      <a href="/">LJS</a>
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="#home">home</a></li>
+        <li><a href="#about">about me</a></li>
+        <li><a href="#stack">stack</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="main" id="home">
+    <div>
+      <h2>welcome to my<br>portfolio</h2>
+      <p>안녕하세요 어쩌고 저쩌고 포트폴리오 입니다.</p>
+    </div>
+
+
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          
+        <use xlink:href="#gentle-wave" x="48" y="-5" fill="rgba(25,25,25,1)" />
+        <use xlink:href="#gentle-wave" x="48" y="-3" fill="rgba(35,35,35,1)" />
+        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(45,45,45,1" />
+        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(55,55,55,1)" />
+        </g>
+        </svg>
+  </section>
+
+
+  <section class="section" id="about">
+    <div class="inner">
+      <article class="about_content">
+        <div class="profile_wrap">
+          <img src="" alt="">
+        </div>
+  
+        <div class="text_wrap">
+          <p>안녕하세요! 저는 몇년차 백엔드 개발자 이진솔 입니다.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit rerum amet facilis. Totam magni temporibus aliquid illo quae quasi ipsum itaque voluptas minima autem dolorum sunt velit facere, sit debitis.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit rerum amet facilis. Totam magni temporibus aliquid illo quae quasi ipsum itaque voluptas minima autem dolorum sunt velit facere, sit debitis.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <em class="accent">Velit rerum amet facilis.</em> Totam magni temporibus aliquid illo quae quasi ipsum itaque voluptas minima autem dolorum sunt velit facere, sit debitis.</p>
+        </div>
+  
+      </article>
+    </div>
+  </section>
+
+
+  <section class="section" id="stack">
+    <div class="inner">
+      <h3 class="title">Tech Stack</h3>
+      <article class="skill_wrap">
+        <div>
+          <h5>Frontend</h5>
+          <ul>
+            <li>#javascript</li>
+            <li>#jquery </li>
+            <li>#vue</li>
+          </ul>
+        </div>
+  
+        <div>
+          <h5>Orm</h5>
+          <ul>
+            <li>#myBatis</li>
+            <li>#jpa - jpql</li>
+            <li>#queryDsl</li>
+          </ul>
+        </div>
+        
+        <div>
+          <h5>BackEnd</h5>
+          <ul>
+            <li>#java</li>
+            <li>#node</li>
+          </ul>
+        </div>
+  
+        <div>
+          <h5>DBMS</h5>
+          <ul>
+            <li>#OracleSql</li>
+            <li>#MySql</li>
+          </ul>
+        </div>
+        
+        <div>
+          <h5>SCM</h5>
+          <ul>
+            <li>#git</li>
+            <li>#svn</li>
+          </ul>
+        </div>
+      </article>
+      
+    </div>
+  </section>
+
+
+
+  <section class="section" id="projects">
+    <div class="inner">
+      <h3 class="title">Project</h3>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="img_wrap">
+              <img src="" alt="">
+            </div>
+
+            <div class="text_wrap">
+              <p>프로젝트 제목</p>
+              <p>프로젝트 한 줄 설명</p>
+            </div>
+          </div>
+  
+          <div class="swiper-slide">
+            <div class="img_wrap">
+              <img src="" alt="">
+            </div>
+
+            <div class="text_wrap">
+              <p>프로젝트 제목</p>
+              <p>프로젝트 한 줄 설명</p>
+            </div>
+          </div>
+  
+          <div class="swiper-slide">
+            <div class="img_wrap">
+              <img src="" alt="">
+            </div>
+
+            <div class="text_wrap">
+              <p>프로젝트 제목</p>
+              <p>프로젝트 한 줄 설명</p>
+            </div>
+          </div>
+  
+          <div class="swiper-slide">
+            <div class="img_wrap">
+              <img src="" alt="">
+            </div>
+
+            <div class="text_wrap">
+              <p>프로젝트 제목</p>
+              <p>프로젝트 한 줄 설명</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section" id="contact" style="min-height: 50vh;">
+    <div class="inner">
+      <h3 class="title">Contact</h3>
+      <ul class="contact_info">
+        <li>
+          <span>Tell</span>
+          <a href="tel:01022223333">010-2222-3333</a>
+        </li>
+        <li>
+          <span>Email</span>
+          <a href="mailto: abc@example.com">dddddd1234@naver.com</a>
+        </li>
+        <li>
+          <span>Github</span>
+          <a href="gihub.com/ddddd">gihub.com/ddddd</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+  <footer>
+    <p>본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.</p>
+    <p>© 2023 LEE JIN-SOL All Rights Reserved.</p>
+  </footer>
+
+  <!-- js -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+      },
+    });
+  </script>
+</body>
+</html>
