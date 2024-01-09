@@ -247,7 +247,12 @@
   color: #ccc;
   margin-bottom: 2rem;
 }
-
+.dec_list li {
+  font-size: 1.6rem;
+  font-weight: 200;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
 
 .swiper,
 .swiper-wrapper {
