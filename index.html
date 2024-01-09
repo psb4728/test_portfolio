@@ -26,6 +26,12 @@
         <li><a href="#contact">contact</a></li>
       </ul>
     </nav>
+
+    <div class="ham_btn">
+      <div class="menu_bar bar1"></div>
+      <div class="menu_bar bar2"></div>
+      <div class="menu_bar bar3"></div>
+    </div>
   </header>
 
   <section class="main" id="home">
@@ -36,18 +42,18 @@
 
 
     <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-        <defs>
-        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-        </defs>
-        <g class="parallax">
-          
-        <use xlink:href="#gentle-wave" x="48" y="-5" fill="rgba(25,25,25,1)" />
-        <use xlink:href="#gentle-wave" x="48" y="-3" fill="rgba(35,35,35,1)" />
-        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(45,45,45,1" />
-        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(55,55,55,1)" />
-        </g>
-        </svg>
+      viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+      <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+      </defs>
+      <g class="parallax">
+        
+      <use xlink:href="#gentle-wave" x="48" y="-5" fill="rgba(25,25,25,1)" />
+      <use xlink:href="#gentle-wave" x="48" y="-3" fill="rgba(35,35,35,1)" />
+      <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(45,45,45,1" />
+      <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(55,55,55,1)" />
+      </g>
+    </svg>
   </section>
 
 
@@ -77,34 +83,34 @@
         <div>
           <h5>Frontend</h5>
           <ul>
-            <li>#javascript</li>
-            <li>#jquery </li>
-            <li>#vue</li>
+            <li># Javascript</li>
+            <li># jquery </li>
+            <li># vue.js</li>
           </ul>
         </div>
   
         <div>
           <h5>Orm</h5>
           <ul>
-            <li>#myBatis</li>
-            <li>#jpa - jpql</li>
-            <li>#queryDsl</li>
+            <li># myBatis</li>
+            <li># jpa - jpql</li>
+            <li># queryDsl</li>
           </ul>
         </div>
         
         <div>
           <h5>BackEnd</h5>
           <ul>
-            <li>#java</li>
-            <li>#node</li>
+            <li># java</li>
+            <li># node.js</li>
           </ul>
         </div>
   
         <div>
           <h5>DBMS</h5>
           <ul>
-            <li>#OracleSql</li>
-            <li>#MySql</li>
+            <li># OracleSql</li>
+            <li># MySql</li>
           </ul>
         </div>
         
@@ -182,8 +188,8 @@
       <h3 class="title">Contact</h3>
       <ul class="contact_info">
         <li>
-          <span>Tell</span>
-          <a href="tel:01022223333">010-2222-3333</a>
+          <span>Phone</span>
+          <a href="tel: 01025590361">010-2559-0361</a>
         </li>
         <li>
           <span>Email</span>
@@ -213,7 +219,30 @@
         el: ".swiper-pagination",
         dynamicBullets: true,
       },
+      breakpoints: {
+        // 화면의 넓이가 320px 이상일 때
+        280: {
+          slidesPerView: 1,
+          spaceBetween: 20
+        },
+        680: {
+          slidesPerView: 2,
+          spaceBetween: 30
+        },
+      }
     });
+
+    $(function() {
+      $('.ham_btn').click(function() {
+        $(this).toggleClass('active');
+        $('nav').toggleClass('show');
+      });
+
+      $('.header nav ul li a').click(function() {
+        $('.ham_btn').removeClass('active');
+        $('nav').removeClass('show');
+      });
+    }); 
   </script>
 </body>
 </html>

@@ -36,6 +36,35 @@
 .header nav ul a {
   font-size: 20px;
 }
+
+.ham_btn {
+  display: none;
+  position: fixed;
+  top: 2.4rem;
+  right: 2rem;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.menu_bar {
+  width: 3.5rem;
+  height: 2px;
+  background-color: #fff;
+  margin: 0.8rem 0;
+  transition: 0.4s;
+}
+
+.bar2 {
+  width: 2rem;
+  margin-left: auto;
+}
+
+.ham_btn.active .bar1 { transform: rotate(-45deg) translate(-0.7rem, 0.8rem); }
+.ham_btn.active .bar2 { opacity: 0; }
+.ham_btn.active .bar3 { transform: rotate(45deg) translate(-0.6rem, -0.8rem); }
+
+
+
 .main {
   position: relative;
   height: 100vh;
@@ -46,22 +75,28 @@
   top: 50%;
   left: 10rem;
   transform: translateY(-50%);
+  overflow: hidden;
 }
 .main > div h2,
-.main > div p { color: var(--white-color); }
+.main > div p { color: var(--white-color); opacity: 0; transform: translateY(200px); }
 .main > div h2 {
-  
   font-size: 10rem;
   font-weight: 400;
   text-transform: uppercase;
   line-height: 1;
+  animation: text-show 1s forwards linear;
 }
 .main > div p {
   font-size: 1.8rem;
   font-weight: 300;
   margin-top: 10px;
+  animation: text-show 1s .5s forwards linear;
 }
 
+@keyframes text-show {
+  0% { opacity: 0; transform: translateY(200px); }
+  100% { opacity: 1; transform: translateY(0px) }
+}
 
 
 .waves {
@@ -105,12 +140,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  column-gap: 2rem;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 .profile_wrap {
   width: 50rem;
   height: 70rem;
   background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .profile_wrap img {
   width: 100%;
@@ -165,7 +203,7 @@
 .skill_wrap > div ul {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 8px;
+  gap: 8px;
 }
 .skill_wrap > div ul li {
   font-size: 1.8rem;
@@ -235,18 +273,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8rem;
+  gap: 2rem 8rem;
   padding: 8rem 0 4rem;
 }
 .contact_info li span,
 .contact_info li a {
   margin-top: 6px;
   font-size: 2rem;
+  transition: color .3s ease;
 }
 .contact_info li span {
   color: var(--sub-text-color);
 }
 
+.contact_info li a:hover { color: var(--accent-color); }
 
 footer { padding: 2rem; }
 footer p {
@@ -267,9 +307,55 @@ footer p {
   }
 }
 
-@media (max-width: 768px) {
+
+
+@media screen and (max-width: 1168px) {
+  .about_content .text_wrap { max-width: 43rem; }
+}
+
+@media screen and (max-width: 970px) {
+  .main > div h2 { font-size: 7rem;}
+  .profile_wrap { max-width: 40rem; height: 50rem; }
   .waves {
-    height:40px;
-    min-height:40px;
+    height:80px;
+    min-height:80px;
   }
+  .contact_info { flex-direction: column;}
+  .contact_info li { text-align: center; }
+}
+
+@media screen and (max-width: 780px) {
+  .ham_btn {  display: block; }
+  nav {
+    position: absolute;
+    top: 69px;
+    right: -100%;
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg-color);
+    opacity: 0;
+    transition: all .5s ease-in-out;
+  }
+  nav.show { right: 0; opacity: 1; }
+  .header nav ul {
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: -5rem;
+  }
+  .header nav ul li a { font-size: 4rem; font-weight: 500; }
 } 
+
+
+@media screen and (max-width: 480px) {
+  .section { padding: 8rem 2rem; }
+  .title { font-size: 5rem; }
+  .main > div { left: 4rem; }
+  .main > div h2 { font-size: 4rem; font-weight: 500; }
+  .main > div p { font-size: 15px; }
+  .profile_wrap { max-width: 100%; width: 100%; }
+  .about_content .text_wrap { max-width: 100%; }
+  .skill_wrap { justify-content: flex-start; margin-top: 5rem; }
+  .skill_wrap > div { width: calc((100% / 2) - 1rem); }
+}
