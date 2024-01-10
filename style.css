@@ -326,7 +326,7 @@ footer p {
 
 
 /* 상세페이지 */
-.project_detail { padding: 2rem 0;}
+.project_detail { padding: 2rem;}
 .project_detail h2 {
   font-size: 2.4rem;
   font-weight: 600;
