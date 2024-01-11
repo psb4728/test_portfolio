@@ -147,7 +147,7 @@
       <h3 class="title">Project</h3>
 
       <!-- Spring Boot -->
-      <div class="swiper mySwiper project_swiper">
+      <div class="swiper mySwiper project_swiper springBoot">
         <h4>Spring Boot</h4>
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -197,11 +197,12 @@
             </div>
 
           </div>
+        </div>
         <div class="swiper-pagination"></div>
       </div>
 
       <!-- Spring Framework  -->
-      <div class="swiper mySwiper project_swiper">
+      <div class="swiper mySwiper project_swiper spring">
         <h4>Spring Framework</h4>
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -251,11 +252,12 @@
             </div>
 
           </div>
+        </div>
         <div class="swiper-pagination"></div>
       </div>
 
       <!-- Node.js  -->
-      <div class="swiper mySwiper project_swiper">
+      <div class="swiper mySwiper project_swiper node">
         <h4>Node.js</h4>
 
         <div class="swiper-wrapper">
@@ -306,17 +308,10 @@
             </div>
 
           </div>
+        </div>
         <div class="swiper-pagination"></div>
       </div>
-    </div>
   </section>
-
-
-  <!-- <section class="popup" style="display: none;">
-    <article class="project_detail project1" style="display: none;">project1</article>
-    <article class="project_detail project2" style="display: none;">project2</article>
-    <article class="project_detail project3" style="display: none;">project3</article>
-  </section> -->
 
 
   <section class="section" id="contact" style="min-height: 50vh;">
@@ -347,7 +342,7 @@
 
   <!-- js -->
   <script>
-    var swiper = new Swiper(".mySwiper", {
+    var springBoot = new Swiper(".project_swiper", {
       slidesPerView: 2,
       spaceBetween: 30,
       loop: true,
@@ -367,6 +362,7 @@
         },
       }
     });
+
 
     $(function() {
       $(".view_btn").click(function () {

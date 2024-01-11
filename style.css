@@ -289,7 +289,6 @@
   font-weight: 300;
   color: var(--sub-text-color);
 }
-.swiper-pagination { position: relative;  margin-top: 4rem; }
 .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active { background-color: var(--accent-color); }
 .swiper-pagination .swiper-pagination-bullet { opacity: 1; background-color: #555; }
 
